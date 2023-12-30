@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import { Icon } from "astro-icon";
+import { SITE } from "@config";
+---
+
+<Layout title={SITE.title} description={SITE.desc}>
+    <SectionContainer
+        class="wrap wrap-px flex justify-center px-4 sm:gap-16 sm:px-8"
+    >
+        <div class="flex mt-32 w-full">
+            <div class="content--container flex-1 md:pr-6 w-full">
+                <article
+                    class="mx-auto prose prose-neutral prose-headings:font-medium prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-h5:text-lg prose-h6:text-base prose-h2:scroll-mt-4 prose-h3:scroll-mt-4 prose-h4:scroll-mt-4 prose-h5:scroll-mt-4 prose-h6:scroll-mt-4 prose-headings:my-8"
+                >
+                    <a
+                        class="blog-back-button cursor-pointer text-neutral-500 flex no-underline mb-16"
+                        href="/"
+                    >
+                        <Icon name="ph:arrow-left-light" class="w-6 h-6 mr-4" />
+                        홈 화면으로 이동
+                    </a>
+                    <div class="post--title">
+                        <h1 class="text-3xl md:text-4xl">
+                            페이지를 찾을 수 없음
+                        </h1>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </SectionContainer>
+</Layout>

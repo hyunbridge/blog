@@ -6,13 +6,13 @@ import { Resvg } from "@resvg/resvg-js";
 const fetchFonts = async () => {
     // Regular Font
     const fontFileRegular = await fetch(
-        "https://api.fontsource.org/v1/fonts/roboto-mono/latin-400-normal.ttf"
+        "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff/Pretendard-Regular.woff"
     );
 
     const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
     const fontFileBold = await fetch(
-        "https://api.fontsource.org/v1/fonts/roboto-mono/latin-700-normal.ttf"
+        "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff/Pretendard-Bold.woff"
     );
     const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
@@ -92,15 +92,15 @@ const options: SatoriOptions = {
     embedFont: true,
     fonts: [
         {
-            name: "Roboto Mono",
+            name: "Pretendard",
             data: fontRegular,
             weight: 400,
             style: "normal"
         },
         {
-            name: "Roboto Mono",
+            name: "Pretendard",
             data: fontBold,
-            weight: 600,
+            weight: 700,
             style: "normal"
         }
     ]

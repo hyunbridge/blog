@@ -2,15 +2,11 @@
 import Layout from "@/layouts/Layout.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import { Image } from "@astrojs/image/components";
-import CardGroup from "@/components/card/CardGroup.astro";
-import Card from "@/components/card/Card.astro";
-import CardBody from "@/components/card/CardBody.astro";
-import CardImage from "@/components/card/CardImage.astro";
-import CardHeader from "@/components/card/CardHeader.astro";
 import FormattedDate from "../../src/components/FormattedDate.astro";
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon";
 import getSortedTags from "@/utils/getSortedTags";
+import { SITE } from "@config";
 
 const posts = await getCollection("blog");
 
@@ -21,17 +17,14 @@ const sortedPosts = posts
     .slice(0, 5);
 ---
 
-<Layout
-    title="Astro Lane"
-    description="Astro Lane is a customizable blog theme that offers minimal styling, making it easy for you to tailor it to your needs. It's a personal portfolio landing template for developers and designers."
->
+<Layout title={SITE.title} description={SITE.desc}>
     <div
         class="main-wrapper wrap-sm grid gap-16 px-8 md:gap-24 lg:gap-32 mx-auto"
     >
         <SectionContainer class="hero--container flex flex-col gap-8 mt-32">
             <Image
-                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&q=80&w=2835&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt={"Photo by charlesdeluvio on Unsplash"}
+                src="/profile.png"
+                alt={"Hyungyo's profile image"}
                 width={160}
                 height={160}
                 aspectRatio={1 / 1}
@@ -43,15 +36,13 @@ const sortedPosts = posts
                     <h1
                         class="text-4xl lg:text-3xl font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter mb-0"
                     >
-                        I&apos;m Astro Lane - a theme made for you!
+                        blog<span class="text-neutral-500">.hgseo.net</span>
                     </h1>
                 </div>
                 <div
                     class="content text-3xl md:text-3xl font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
                 >
-                    I'm a theme designed for Astro that shows how you can create
-                    a personal blog and showcase your projects using this
-                    starter.
+                    {SITE.desc}
                 </div>
             </div>
         </SectionContainer>

@@ -3,14 +3,13 @@
 import type { Site, SocialMediaObjects } from "./types";
 
 export const SITE: Site = {
-    siteUrl: "https:/astro-lane.chrstnl.com/", // Always put "/" at the end of the URL
-    author: "chrstnl",
-    desc: "A personal portfolio landing template for developers and designers.",
-    title: "Astro Lane",
-    ogImage: "images/astro-lane.png",
-    keywords:
-        "Personal portfolio, landing page, page template, developer portfoliom designer portfolio",
-    postPerPage: 3
+    siteUrl: "https://blog.hgseo.net/", // Always put "/" at the end of the URL
+    author: "Hyungyo Seo",
+    desc: "단숨에 잘 하기보다 꾸준히 자라기를 원합니다. 제가 배우고 느낀 것들을 나누는 블로그입니다.",
+    title: "blog.hgseo.net",
+    ogImage: "profile.png",
+    keywords: "개발자, 포트폴리오, TIL",
+    postPerPage: 5
 };
 
 // The site uses iconify - you can find icons on https://iconify.design/.
@@ -18,7 +17,7 @@ export const SITE: Site = {
 export const SOCIALS: SocialMediaObjects = [
     {
         name: "Github",
-        href: "https://github.com/christian-luntok/astro-lane/",
+        href: "https://github.com/hyunbridge",
         icon: "ph:github-logo-duotone",
         title: `Follow ${SITE.author} on Github`,
         active: true
@@ -35,14 +34,14 @@ export const SOCIALS: SocialMediaObjects = [
         href: "https://github.com/christian-luntok/astro-lane/",
         icon: "ph:instagram-logo-duotone",
         title: `Follow ${SITE.author} on Instagram`,
-        active: true
+        active: false
     },
     {
         name: "LinkedIn",
         href: "https://github.com/christian-luntok/astro-lane/",
         icon: "ph:linkedin-logo-duotone",
         title: `Follow ${SITE.title} on LinkedIn`,
-        active: true
+        active: false
     },
     {
         name: "Mail",
@@ -56,7 +55,7 @@ export const SOCIALS: SocialMediaObjects = [
         href: "https://github.com/christian-luntok/astro-lane/",
         icon: "ph:twitter-logo-duotone",
         title: `Follow ${SITE.author} on Twitter`,
-        active: true
+        active: false
     },
     {
         name: "YouTube",

@@ -1,8 +1,8 @@
 ---
-title: "Testing Testing 123"
+title: "Test post: 테스트 포스트"
 description: "First Post - Hello World"
-pubDate: 2023-04-02
-heroImage: "/images/placeholder-hero.jpg"
+pubDate: 2023-12-30
+heroImage: "https://images.unsplash.com/photo-1702529939203-04c666ee2b7f"
 featured: true
 draft: false
 tags:
